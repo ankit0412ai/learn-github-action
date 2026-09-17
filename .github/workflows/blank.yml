@@ -1,0 +1,10 @@
+name: First Workflow
+on: push
+jobs:
+    first-job: 
+      runs-on: windows-latest
+      steps:
+        - name: Hello GitHub action
+          run: echo "Hello, this is a GitHub action"
+        - name: Bye GitHub action
+          run: echo "Goodbye! GitHub action"
