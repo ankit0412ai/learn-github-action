@@ -5,16 +5,16 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: "Welcome"
-        run: "welcome run"
+        run: echo "welcome run"
 
   middle-job:
     runs-on: windows-latest
     steps:
       - name: "middle"
-        run: "middle run"
+        run: echo "middle run"
 
   by-job:
     runs-on: windows-latest
     steps:
       - name: "by"
-        run: "buy run"
+        run: echo "buy run"
