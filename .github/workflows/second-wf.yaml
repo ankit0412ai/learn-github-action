@@ -1,0 +1,20 @@
+name: Second-WF
+on: push
+jobs:
+  hello-job:
+    runs-on: windows-latest
+    steps:
+      - name: "Welcome"
+        run: "welcome run"
+
+  middle-job:
+    runs-on: windows-latest
+    steps:
+      - name: "middle"
+        run: "middle run"
+
+  by-job:
+    runs-on: windows-latest
+    steps:
+      - name: "by"
+        run: "buy run"
