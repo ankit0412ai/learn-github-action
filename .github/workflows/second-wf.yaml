@@ -1,5 +1,7 @@
 name: Second-WF
-on: push
+on:
+  push:
+  workflow_dispatch:
 jobs:
   hello-job:
     runs-on: windows-latest
