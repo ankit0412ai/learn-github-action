@@ -1,0 +1,17 @@
+name: Check File exist
+on:
+  push:
+  workflow-dispatch:
+jobs:
+  validateFiles:
+    runs-on: windows-latest
+
+    stpes:
+      - name: get-code
+        uses: actions/checkout@v4
+
+      - name: html file exit
+        run: test -f Pratice/index.html
+
+      - name: script file exit
+        run: test -f Pratice/script.js
