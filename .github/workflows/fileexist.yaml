@@ -1,12 +1,12 @@
 name: Check File exist
 on:
   push:
-  workflow-dispatch:
+  workflow_dispatch:
 jobs:
   validateFiles:
     runs-on: windows-latest
 
-    stpes:
+    steps:
       - name: get-code
         uses: actions/checkout@v4
 
