@@ -1,0 +1,37 @@
+name: RunJobs
+on:
+  workflow_dispatch:
+jobs:
+  validateHtml:
+    runs-on: windows-latest
+
+    steps:
+      - name: get-code
+        uses: actions/checkout@v4
+
+      - name: html file exit
+        run: test -f Pratice/index.html
+
+  validateJs:
+    runs-on: windows-latest
+
+    steps:
+      - name: get-code
+        uses: actions/checkout@v4
+
+      - name: script file exit
+        run: test -f Pratice/script.js
+
+  validateCode:
+    needs: [validateHtml, validateJs]
+    runs-on: windows-latest
+
+    steps:
+      - name: get-code
+        uses: actions/checkout@v4
+
+      - name: valid html file
+        run: npx htmlhint Pratice/index.html
+
+      - name: valid js file
+        run: node --check Pratice/script.js

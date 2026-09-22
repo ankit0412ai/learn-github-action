@@ -1,6 +1,5 @@
 name: Second-WF
 on:
-  push:
   workflow_dispatch:
 jobs:
   hello-job:
