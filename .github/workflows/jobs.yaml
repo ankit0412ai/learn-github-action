@@ -7,7 +7,7 @@ jobs:
 
     steps:
       - name: get-code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: html file exit
         run: test -f Pratice/index.html
@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: get-code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: script file exit
         run: test -f Pratice/script.js
@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: get-code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: valid html file
         run: npx htmlhint Pratice/index.html
