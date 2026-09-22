@@ -1,6 +1,6 @@
 name: RunJobs
 on:
-  workflow_dispatch:
+  push:
 jobs:
   validateHtml:
     runs-on: windows-latest
